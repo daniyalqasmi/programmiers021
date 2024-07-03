@@ -1,0 +1,44 @@
+.skillText {
+    transition: opacity 0.5s;
+    
+  }
+  .iphone-bezels_iphone-bezels-video-container__uPIHP {
+    position: relative;
+  }
+  .iphone-bezels_iphone-bezels-video-inner-container__aLOII {
+    position: absolute;
+    width: 84.5%;
+    left: 7.7%;
+    top: 2.7%;
+    border-radius: 6%;
+    overflow: hidden;
+  }
+  .carousel_viewport__Qs9Qr.is-draggable {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  .carousel_viewport__Qs9Qr.is-dragging {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  .carousel_container__zV0MF {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .carousel_slide__AaCxi {
+    flex: 0 0 auto;
+    max-width: min(70%, 620px);
+    opacity: 0.4;
+    transition: opacity 0.4s;
+  }
+  .carousel_slide__AaCxi.active {
+    opacity: 1;
+  }
+  .trustedby_bg__fGD1R {
+    background: linear-gradient(180deg, #fff, #fff 69.9999%, #000 70%, #000);
+  }

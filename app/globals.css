@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #dcff50;
+    --color-secondary: #7b61ff;
+    --color-heading: #ffffff;
+    --color-text: rgba(255, 255, 255, 0.6);
+    --color-background: #000000;
+  }
+}
+
+.glass_light{/* From https://css.glass */
+
+  backdrop-filter: blur(2px);
+
+}
+  .glass_dark{
+
+
+
+backdrop-filter: blur(2px);
+
+  }
+
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+ 
+
+@layer utilities {
+
+  .translate-y-centered-offset {
+    @apply translate-y-[calc(-50%_+_var(--y))];
+  }
+  .translate-x-centered-offset {
+    @apply translate-x-[calc(-50%_+_var(--x))];
+  }
+}
+
+:root {
+  --y: 0;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+/* Add this CSS to your stylesheets */
+/* Add this CSS to your stylesheets */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* 100% of the viewport height */
+  z-index: 50; /* Adjust as needed */
+  display: flex; /* Add this to make menu items take full height */
+  flex-direction: column; /* Add this to stack menu items vertically */
+  overflow: hidden;
+}
+
+#menu-items {
+  flex-grow: 1; /* Add this to make menu items take remaining height */
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center 60%;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+
+}
+
+#menu-items:hover ~ #menu-background-image {
+  background-size: 100vmax;
+  
+}
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+#menu-background-pattern-dark {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 9%,
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 9vmin 9vmin;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100%;
+  z-index: 1;
+}
+
+.menu-item {
+  color: #292a7c;
+  cursor: pointer;
+  display: block;
+
+  font-size: 50px;
+  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  text-decoration: none;
+  transition: opacity 400ms ease;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern-dark {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern-dark {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern-dark {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern-dark {
+  background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center 60%;
+}
+
+#menu-items:hover ~ #menu-background-pattern-dark {
+  background-size: 11vmin 11vmin;
+
+}
+
+#menu-items:hover ~ #menu-background-image {
+  background-size: 100vmax;
+
+}
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+#menu-background-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.315) 9%, transparent 9%);
+  background-position: 0% 0%;
+  background-position: 0% 0%;
+
+  background-size: 9vmin 9vmin;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100%;
+  z-index: 1;
+}
+.hide-nav {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* Show the navigation bar */
+.show-nav {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+@media screen and (max-width: 500px) {
+  .menu-item {
+    font-size: 40px;
+  }
+  #menu-items {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .menu-item {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #menu-items {
+    padding: 2rem;
+  }
+}
+
+
